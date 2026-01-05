@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 1. 从 Hugging Face 下载 HY-MT1.5-1.8B 模型：
    ```bash
-   huggingface-cli download tencent/HY-MT1.5-1.8B --local-dir models-1.5b
+   huggingface-cli download tencent/HY-MT1.5-1.8B --local-dir models-1.8b
    ```
    也可下载7B模型：
    ```bash

@@ -10,7 +10,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # Set up project relative path for model storage
 current_dir = os.path.dirname(os.path.abspath(__file__))
 # Get model directory from environment variable or use default
-model_dir_name = os.environ.get("MODEL_DIR", "models-1.5b")
+model_dir_name = os.environ.get("MODEL_DIR", "models-1.8b")
 model_dir = os.path.join(current_dir, model_dir_name)
 print(f"Using model directory: {model_dir} (set via {'environment variable' if 'MODEL_DIR' in os.environ else 'default'})")
 
