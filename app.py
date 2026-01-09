@@ -258,8 +258,11 @@ format_template = "将以下<source></source>之间的文本翻译为{target_lan
 
 # Function to update prompt when target language changes
 def update_prompt(target_lang):
+    # Get model language name first
     model_target_lang = display_to_model_map.get(target_lang, target_lang)
-    return f"Translate the following segment into {model_target_lang}, without additional explanation.\n"
+    # Then get display name from display_language_map
+    display_target_lang = display_language_map.get(model_target_lang, model_target_lang)
+    return f"Translate the following segment into {display_target_lang}, without additional explanation.\n"
 
 
 def extract_text_from_pdf(pdf_file):
@@ -293,12 +296,14 @@ def translate_text(source_text, target_lang, prompt=None, max_new_tokens=1024, t
     
     # Convert display name to model language name
     model_target_lang = display_to_model_map.get(target_lang, target_lang)
+    # Then get display name from display_language_map
+    display_target_lang = display_language_map.get(model_target_lang, model_target_lang)
     
     # Use provided prompt or create default
     if prompt:
         full_prompt = f"{prompt}{source_text}"
     else:
-        full_prompt = f"Translate the following segment into {model_target_lang}, without additional explanation.\n{source_text}"
+        full_prompt = f"Translate the following segment into {display_target_lang}, without additional explanation.\n{source_text}"
     
     messages = [{"role": "user", "content": full_prompt}]
     
