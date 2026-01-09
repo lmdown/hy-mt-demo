@@ -743,38 +743,32 @@ with gr.Blocks(title=lang['app_title']) as demo:
                 gr.Markdown("### Usage")
                 gr.Markdown("Use this template when you need to control specific terminology translations.")
                 gr.Markdown("### Example")
-                gr.Markdown("```")
                 gr.Markdown("参考下面的翻译：")
                 gr.Markdown("machine learning 翻译成 机器学习")
                 gr.Markdown("neural network 翻译成 神经网络")
                 gr.Markdown("")
                 gr.Markdown("将以下文本翻译为中文，注意只需要输出翻译后的结果，不要额外解释：")
                 gr.Markdown("I'm studying machine learning and neural networks.")
-                gr.Markdown("```")
                 
             # Context Translation Template
             with gr.Accordion(lang['context_template_title'], open=False):
                 gr.Markdown("### Usage")
                 gr.Markdown("Use this template when you need to provide additional context for better translation.")
                 gr.Markdown("### Example")
-                gr.Markdown("```")
                 gr.Markdown("This text is about artificial intelligence research.")
                 gr.Markdown("参考上面的信息，把下面的文本翻译成中文，注意不需要翻译上文，也不要额外解释：")
                 gr.Markdown("The model achieved 95% accuracy on the test set.")
-                gr.Markdown("```")
                 
             # Format-Preserving Translation Template
             with gr.Accordion(lang['format_template_title'], open=False):
                 gr.Markdown("### Usage")
                 gr.Markdown("Use this template when you need to preserve formatting tags in the translation.")
                 gr.Markdown("### Example")
-                gr.Markdown("```")
                 gr.Markdown("将以下<source></source>之间的文本翻译为中文，注意只需要输出翻译后的结果，不要额外解释，原文中的<sn></sn>标签表示标签内文本包含格式信息，需要在译文中相应的位置尽量保留该标签。输出格式为：<target>str</target>")
                 gr.Markdown("")
                 gr.Markdown("<source>")
                 gr.Markdown("The <sn>machine learning</sn> model is trained on <sn>large datasets</sn>.")
                 gr.Markdown("</source>")
-                gr.Markdown("```")
                 
             # Prompt Usage Tips
             with gr.Accordion(lang['prompt_tips_title'], open=False):
