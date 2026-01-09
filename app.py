@@ -526,15 +526,18 @@ with gr.Blocks(title=lang['app_title']) as demo:
         with gr.TabItem(lang['text_tab']):
             with gr.Row():
                 with gr.Column():
+                    # Default input text
+                    default_input_text = "# Machine Learning Technical Overview\n\nThe neural network architecture consists of multiple layers including convolutional neural networks (CNNs) and recurrent neural networks (RNNs). The model uses backpropagation to optimize weights and biases, with stochastic gradient descent (SGD) as the optimizer.\n\nKey hyperparameters include learning rate, batch size, and epoch count. The model achieves 95% accuracy on the validation set, with a precision of 0.92 and recall of 0.94.\n\nThis implementation uses PyTorch for model development and TensorBoard for visualization. The deployment pipeline includes Docker containerization and Kubernetes orchestration for scaling."
+                    
                     input_text = gr.Textbox(
                         label=lang['original_text'],
                         lines=10,
                         placeholder=lang['placeholder'],
-                        value="# Machine Learning Technical Overview\n\nThe neural network architecture consists of multiple layers including convolutional neural networks (CNNs) and recurrent neural networks (RNNs). The model uses backpropagation to optimize weights and biases, with stochastic gradient descent (SGD) as the optimizer.\n\nKey hyperparameters include learning rate, batch size, and epoch count. The model achieves 95% accuracy on the validation set, with a precision of 0.92 and recall of 0.94.\n\nThis implementation uses PyTorch for model development and TensorBoard for visualization. The deployment pipeline includes Docker containerization and Kubernetes orchestration for scaling."
+                        value=default_input_text
                     )
                     input_char_count = gr.Textbox(
                         label="",
-                        value=f"0 {lang['characters']}",
+                        value=f"{len(default_input_text)} {lang['characters']}",
                         interactive=False,
                         container=False,
                         scale=1
