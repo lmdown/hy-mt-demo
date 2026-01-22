@@ -80,7 +80,7 @@ python app.py
 本 Demo 仅为调用示例，底层 HY-MT 模型的使用需遵守《腾讯混元社区许可协议》，且 Demo 的使用范围不得超出 HY-MT 模型的授权边界（如地域限制、使用场景限制）。
 
 1. 本项目仅为腾讯混元HY-MT1.5翻译模型的调用示例（Demo），核心翻译能力依赖[Tencent-Hunyuan/HY-MT](https://github.com/Tencent-Hunyuan/HY-MT)开源项目；
-2. 本Demo代码遵循MIT License开源，但使用本Demo调用HY-MT模型时，需严格遵守《腾讯混元社区许可协议》(https://github.com/Tencent-Hunyuan/HY-MT/blob/main/License.txt)；
+2. 本Demo代码遵循TENCENT HY COMMUNITY LICENSE AGREEMENT，使用本Demo调用HY-MT模型时，需严格遵守《腾讯混元社区许可协议》(https://github.com/Tencent-Hunyuan/HY-MT/blob/main/License.txt)；
 3. 禁止欧盟、英国、韩国地区用户使用本Demo调用HY-MT模型，违规使用需自行承担法律责任；
 4. 本Demo仅用于学习和非商业测试，不得用于改进非腾讯混元系列AI模型。
 
